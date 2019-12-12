@@ -1,29 +1,43 @@
 package main
 
 import (
+	"log"
 	"os"
 
 	"github.com/opencontainers/runc/libcontainer"
-	"github.com/opencontainers/runc/libcontainer/configs"
+	"github.com/opencontainers/runc/libcontainer/specconv"
 )
 
 func main() {
-	//	f, err := libcontainer.New("/tmp", libcontainer.RootlessCgroupfs)
-	f, err := libcontainer.New("/tmp", nil)
+	f, err := libcontainer.New("/tmp", libcontainer.RootlessCgroupfs)
+	// f, err := libcontainer.New("/tmp", nil)
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
 
-	c, err := f.Create("test", &configs.Config{
-		Rootfs:     "/rootfs",
-		Readonlyfs: true,
-		Mounts: []*configs.Mount{{
-			Source:      "/data/test",
-			Destination: "/test",
-		}},
+	spec := specconv.Example()
+	specconv.ToRootless(spec)
+
+	conf, err := specconv.CreateLibcontainerConfig(&specconv.CreateOpts{
+		CgroupName:      "foo",
+		Spec:            spec,
+		RootlessEUID:    true,
+		RootlessCgroups: true,
 	})
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
+	}
+
+	conf.Rootfs = "/rootfs"
+	conf.Readonlyfs = true
+	// Mounts: []*configs.Mount{{
+	// 	Source:      "/data/test",
+	// 	Destination: "/test",
+	// }},
+
+	c, err := f.Create("foo", conf)
+	if err != nil {
+		log.Fatal(err)
 	}
 
 	err = c.Run(&libcontainer.Process{
@@ -32,6 +46,6 @@ func main() {
 		Stderr: os.Stderr,
 	})
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
 }

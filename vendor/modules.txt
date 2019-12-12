@@ -16,7 +16,7 @@ github.com/golang/protobuf/proto
 github.com/konsorten/go-windows-terminal-sequences
 # github.com/mrunalp/fileutils v0.0.0-20171103030105-7d4729fb3618
 github.com/mrunalp/fileutils
-# github.com/opencontainers/runc v1.0.0-rc8.0.20190827142921-dd075602f158
+# github.com/opencontainers/runc v1.0.0-rc9
 github.com/opencontainers/runc/libcontainer
 github.com/opencontainers/runc/libcontainer/apparmor
 github.com/opencontainers/runc/libcontainer/cgroups
@@ -29,6 +29,7 @@ github.com/opencontainers/runc/libcontainer/keys
 github.com/opencontainers/runc/libcontainer/logs
 github.com/opencontainers/runc/libcontainer/mount
 github.com/opencontainers/runc/libcontainer/seccomp
+github.com/opencontainers/runc/libcontainer/specconv
 github.com/opencontainers/runc/libcontainer/stacktrace
 github.com/opencontainers/runc/libcontainer/system
 github.com/opencontainers/runc/libcontainer/user
