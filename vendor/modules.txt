@@ -1,0 +1,56 @@
+# github.com/checkpoint-restore/go-criu v0.0.0-20190109184317-bdb7599cd87b
+github.com/checkpoint-restore/go-criu/rpc
+# github.com/containerd/console v0.0.0-20191206165004-02ecf6a7291e
+github.com/containerd/console
+# github.com/coreos/go-systemd v0.0.0-20190719114852-fd7a80b32e1f
+github.com/coreos/go-systemd/dbus
+# github.com/cyphar/filepath-securejoin v0.2.2
+github.com/cyphar/filepath-securejoin
+# github.com/docker/go-units v0.4.0
+github.com/docker/go-units
+# github.com/godbus/dbus v0.0.0-20181101234600-2ff6f7ffd60f
+github.com/godbus/dbus
+# github.com/golang/protobuf v1.3.2
+github.com/golang/protobuf/proto
+# github.com/konsorten/go-windows-terminal-sequences v1.0.2
+github.com/konsorten/go-windows-terminal-sequences
+# github.com/mrunalp/fileutils v0.0.0-20171103030105-7d4729fb3618
+github.com/mrunalp/fileutils
+# github.com/opencontainers/runc v1.0.0-rc8.0.20190827142921-dd075602f158
+github.com/opencontainers/runc/libcontainer
+github.com/opencontainers/runc/libcontainer/apparmor
+github.com/opencontainers/runc/libcontainer/cgroups
+github.com/opencontainers/runc/libcontainer/cgroups/fs
+github.com/opencontainers/runc/libcontainer/cgroups/systemd
+github.com/opencontainers/runc/libcontainer/configs
+github.com/opencontainers/runc/libcontainer/configs/validate
+github.com/opencontainers/runc/libcontainer/intelrdt
+github.com/opencontainers/runc/libcontainer/keys
+github.com/opencontainers/runc/libcontainer/logs
+github.com/opencontainers/runc/libcontainer/mount
+github.com/opencontainers/runc/libcontainer/seccomp
+github.com/opencontainers/runc/libcontainer/stacktrace
+github.com/opencontainers/runc/libcontainer/system
+github.com/opencontainers/runc/libcontainer/user
+github.com/opencontainers/runc/libcontainer/utils
+# github.com/opencontainers/runtime-spec v0.1.2-0.20190618234442-a950415649c7
+github.com/opencontainers/runtime-spec/specs-go
+# github.com/opencontainers/selinux v1.3.0
+github.com/opencontainers/selinux/go-selinux
+github.com/opencontainers/selinux/go-selinux/label
+# github.com/pkg/errors v0.8.1
+github.com/pkg/errors
+# github.com/seccomp/libseccomp-golang v0.9.1
+github.com/seccomp/libseccomp-golang
+# github.com/sirupsen/logrus v1.4.2
+github.com/sirupsen/logrus
+# github.com/syndtr/gocapability v0.0.0-20180916011248-d98352740cb2
+github.com/syndtr/gocapability/capability
+# github.com/vishvananda/netlink v1.0.0
+github.com/vishvananda/netlink
+github.com/vishvananda/netlink/nl
+# github.com/vishvananda/netns v0.0.0-20190625233234-7109fa855b0f
+github.com/vishvananda/netns
+# golang.org/x/sys v0.0.0-20191120155948-bd437916bb0e
+golang.org/x/sys/unix
+golang.org/x/sys/windows
