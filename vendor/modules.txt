@@ -28,6 +28,7 @@ github.com/opencontainers/runc/libcontainer/intelrdt
 github.com/opencontainers/runc/libcontainer/keys
 github.com/opencontainers/runc/libcontainer/logs
 github.com/opencontainers/runc/libcontainer/mount
+github.com/opencontainers/runc/libcontainer/nsenter
 github.com/opencontainers/runc/libcontainer/seccomp
 github.com/opencontainers/runc/libcontainer/specconv
 github.com/opencontainers/runc/libcontainer/stacktrace

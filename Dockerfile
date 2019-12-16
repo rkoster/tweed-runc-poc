@@ -18,11 +18,8 @@ RUN apt-get install go-md2man git -y
 RUN go get -d github.com/opencontainers/image-tools/cmd/oci-image-tool \
     && cd /root/go/src/github.com/opencontainers/image-tools/ \
     && make all && make install
-
-RUN cat image/index.json
 RUN mkdir /rootfs && oci-image-tool unpack --ref name=latest /image /rootfs
 
-ADD system-preparation /bin/system-preparation
 ADD main.go go.mod go.sum /src/
 ADD vendor /src/vendor
 RUN cd /src && GOFLAGS=-mod=vendor go build -tags seccomp -o /tweed

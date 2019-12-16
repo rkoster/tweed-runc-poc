@@ -3,22 +3,31 @@ package main
 import (
 	"log"
 	"os"
+	"runtime"
 
 	"github.com/opencontainers/runc/libcontainer"
+	_ "github.com/opencontainers/runc/libcontainer/nsenter"
 	"github.com/opencontainers/runc/libcontainer/specconv"
 )
 
 func main() {
-	f, err := libcontainer.New("/tmp", libcontainer.RootlessCgroupfs)
-	// f, err := libcontainer.New("/tmp", nil)
+	if len(os.Args) > 1 && os.Args[1] == "init" {
+		runtime.GOMAXPROCS(1)
+		runtime.LockOSThread()
+		factory, _ := libcontainer.New("")
+		if err := factory.StartInitialization(); err != nil {
+			log.Fatal(err)
+		}
+		panic("--this line should have never been executed, congratulations--")
+	}
+
+	factory, err := libcontainer.New("/tmp", libcontainer.RootlessCgroupfs)
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	spec := specconv.Example()
 	specconv.ToRootless(spec)
-
-	spec.Process.Args = []string{"safe", "--version"}
 
 	conf, err := specconv.CreateLibcontainerConfig(&specconv.CreateOpts{
 		CgroupName:      "foo",
@@ -37,18 +46,16 @@ func main() {
 	// 	Destination: "/test",
 	// }},
 
-	c, err := f.Create("foo", conf)
+	c, err := factory.Create("foo", conf)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	// out, _ := json.Marshal(spec)
-	// fmt.Println(string(out))
-
-	err = c.Start(&libcontainer.Process{
-		Args:   []string{"safe", "--version"},
+	err = c.Run(&libcontainer.Process{
+		Args:   []string{"/usr/bin/safe", "--version"},
 		Stdout: os.Stdout,
 		Stderr: os.Stderr,
+		Init:   true,
 	})
 	if err != nil {
 		log.Fatal(err)
