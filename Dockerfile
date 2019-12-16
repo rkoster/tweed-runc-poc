@@ -12,7 +12,6 @@ RUN add-apt-repository ppa:longsleep/golang-backports \
 
 COPY --from=image /image /image
 
-RUN apt-get install libseccomp-dev -y
 RUN apt-get install go-md2man git -y
 
 RUN go get -d github.com/opencontainers/image-tools/cmd/oci-image-tool \
@@ -22,6 +21,6 @@ RUN mkdir /rootfs && oci-image-tool unpack --ref name=latest /image /rootfs
 
 ADD main.go go.mod go.sum /src/
 ADD vendor /src/vendor
-RUN cd /src && GOFLAGS=-mod=vendor go build -tags seccomp -o /tweed
+RUN cd /src && GOFLAGS=-mod=vendor go build -o /tweed
 
 ENTRYPOINT /tweed
