@@ -1,21 +1,76 @@
+# github.com/andybalholm/brotli v0.0.0-20190621154722-5f990b63d2d6
+github.com/andybalholm/brotli
+# github.com/apex/log v1.1.1
+github.com/apex/log
 # github.com/checkpoint-restore/go-criu v0.0.0-20190109184317-bdb7599cd87b
 github.com/checkpoint-restore/go-criu/rpc
 # github.com/containerd/console v0.0.0-20191206165004-02ecf6a7291e
 github.com/containerd/console
 # github.com/coreos/go-systemd v0.0.0-20190719114852-fd7a80b32e1f
 github.com/coreos/go-systemd/dbus
+# github.com/cpuguy83/go-md2man/v2 v2.0.0-20190314233015-f79a8a8ca69d
+github.com/cpuguy83/go-md2man/v2/md2man
 # github.com/cyphar/filepath-securejoin v0.2.2
 github.com/cyphar/filepath-securejoin
 # github.com/docker/go-units v0.4.0
 github.com/docker/go-units
+# github.com/dsnet/compress v0.0.1
+github.com/dsnet/compress
+github.com/dsnet/compress/bzip2
+github.com/dsnet/compress/bzip2/internal/sais
+github.com/dsnet/compress/internal
+github.com/dsnet/compress/internal/errors
+github.com/dsnet/compress/internal/prefix
 # github.com/godbus/dbus v0.0.0-20181101234600-2ff6f7ffd60f
 github.com/godbus/dbus
+# github.com/golang/gddo v0.0.0-20190419222130-af0f2af80721
+github.com/golang/gddo/httputil
+github.com/golang/gddo/httputil/header
 # github.com/golang/protobuf v1.3.2
 github.com/golang/protobuf/proto
+# github.com/golang/snappy v0.0.1
+github.com/golang/snappy
+# github.com/klauspost/compress v1.9.2
+github.com/klauspost/compress/flate
+github.com/klauspost/compress/fse
+github.com/klauspost/compress/huff0
+github.com/klauspost/compress/snappy
+github.com/klauspost/compress/zstd
+github.com/klauspost/compress/zstd/internal/xxhash
+# github.com/klauspost/pgzip v1.2.1
+github.com/klauspost/pgzip
 # github.com/konsorten/go-windows-terminal-sequences v1.0.2
 github.com/konsorten/go-windows-terminal-sequences
+# github.com/mholt/archiver/v3 v3.3.0
+github.com/mholt/archiver/v3
 # github.com/mrunalp/fileutils v0.0.0-20171103030105-7d4729fb3618
 github.com/mrunalp/fileutils
+# github.com/nwaples/rardecode v1.0.0
+github.com/nwaples/rardecode
+# github.com/openSUSE/umoci v0.4.5
+github.com/openSUSE/umoci
+github.com/openSUSE/umoci/mutate
+github.com/openSUSE/umoci/oci/cas
+github.com/openSUSE/umoci/oci/cas/dir
+github.com/openSUSE/umoci/oci/casext
+github.com/openSUSE/umoci/oci/casext/mediatype
+github.com/openSUSE/umoci/oci/config/convert
+github.com/openSUSE/umoci/oci/config/generate
+github.com/openSUSE/umoci/oci/layer
+github.com/openSUSE/umoci/pkg/fseval
+github.com/openSUSE/umoci/pkg/hardening
+github.com/openSUSE/umoci/pkg/idtools
+github.com/openSUSE/umoci/pkg/mtreefilter
+github.com/openSUSE/umoci/pkg/system
+github.com/openSUSE/umoci/pkg/testutils
+github.com/openSUSE/umoci/pkg/unpriv
+github.com/openSUSE/umoci/third_party/shared
+github.com/openSUSE/umoci/third_party/user
+# github.com/opencontainers/go-digest v1.0.0-rc1
+github.com/opencontainers/go-digest
+# github.com/opencontainers/image-spec v1.0.1
+github.com/opencontainers/image-spec/specs-go
+github.com/opencontainers/image-spec/specs-go/v1
 # github.com/opencontainers/runc v1.0.0-rc9
 github.com/opencontainers/runc/libcontainer
 github.com/opencontainers/runc/libcontainer/apparmor
@@ -35,24 +90,50 @@ github.com/opencontainers/runc/libcontainer/stacktrace
 github.com/opencontainers/runc/libcontainer/system
 github.com/opencontainers/runc/libcontainer/user
 github.com/opencontainers/runc/libcontainer/utils
-# github.com/opencontainers/runtime-spec v0.1.2-0.20190618234442-a950415649c7
+# github.com/opencontainers/runtime-spec v1.0.2-0.20190207185410-29686dbc5559
 github.com/opencontainers/runtime-spec/specs-go
 # github.com/opencontainers/selinux v1.3.0
 github.com/opencontainers/selinux/go-selinux
 github.com/opencontainers/selinux/go-selinux/label
+# github.com/pierrec/lz4 v2.0.5+incompatible
+github.com/pierrec/lz4
+github.com/pierrec/lz4/internal/xxh32
 # github.com/pkg/errors v0.8.1
 github.com/pkg/errors
+# github.com/rootless-containers/proto v0.1.0
+github.com/rootless-containers/proto/go-proto
+# github.com/russross/blackfriday/v2 v2.0.1
+github.com/russross/blackfriday/v2
 # github.com/seccomp/libseccomp-golang v0.9.1
 github.com/seccomp/libseccomp-golang
+# github.com/shurcooL/sanitized_anchor_name v1.0.0
+github.com/shurcooL/sanitized_anchor_name
 # github.com/sirupsen/logrus v1.4.2
 github.com/sirupsen/logrus
 # github.com/syndtr/gocapability v0.0.0-20180916011248-d98352740cb2
 github.com/syndtr/gocapability/capability
+# github.com/ulikunitz/xz v0.5.6
+github.com/ulikunitz/xz
+github.com/ulikunitz/xz/internal/hash
+github.com/ulikunitz/xz/internal/xlog
+github.com/ulikunitz/xz/lzma
+# github.com/urfave/cli v1.22.2
+github.com/urfave/cli
+# github.com/vbatts/go-mtree v0.4.4
+github.com/vbatts/go-mtree
+github.com/vbatts/go-mtree/pkg/govis
+github.com/vbatts/go-mtree/xattr
 # github.com/vishvananda/netlink v1.0.0
 github.com/vishvananda/netlink
 github.com/vishvananda/netlink/nl
 # github.com/vishvananda/netns v0.0.0-20190625233234-7109fa855b0f
 github.com/vishvananda/netns
+# github.com/xi2/xz v0.0.0-20171230120015-48954b6210f8
+github.com/xi2/xz
+# golang.org/x/crypto v0.0.0-20190911031432-227b76d455e7
+golang.org/x/crypto/ripemd160
+# golang.org/x/net v0.0.0-20190912160710-24e19bdeb0f2
+golang.org/x/net/context
 # golang.org/x/sys v0.0.0-20191120155948-bd437916bb0e
 golang.org/x/sys/unix
 golang.org/x/sys/windows
