@@ -18,10 +18,12 @@ func main() {
 	spec := specconv.Example()
 	specconv.ToRootless(spec)
 
+	spec.Process.Args = []string{"safe", "--version"}
+
 	conf, err := specconv.CreateLibcontainerConfig(&specconv.CreateOpts{
 		CgroupName:      "foo",
 		Spec:            spec,
-		RootlessEUID:    true,
+		RootlessEUID:    os.Geteuid() != 0,
 		RootlessCgroups: true,
 	})
 	if err != nil {
@@ -40,7 +42,10 @@ func main() {
 		log.Fatal(err)
 	}
 
-	err = c.Run(&libcontainer.Process{
+	// out, _ := json.Marshal(spec)
+	// fmt.Println(string(out))
+
+	err = c.Start(&libcontainer.Process{
 		Args:   []string{"safe", "--version"},
 		Stdout: os.Stdout,
 		Stderr: os.Stderr,
